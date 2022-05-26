@@ -8,10 +8,14 @@
 
 * Font Weights
 Defaultt : 400
+Medium : 500
+Semi Bold : 600
+Bold : 700
 
 * Line Heights
 Default : 1
-
+Paragraph Default : 1.6
+Small : 1.05
 
 
 - 02 COLORS 
@@ -38,7 +42,7 @@ Default : 1
 
 
 - 06 BORDER-RADIUS
-
+Default : 9px
 
 
 - 07 WHITE SPACE
@@ -99,24 +103,9 @@ body{
 }
 
 
-
-.section-hero{
-    background-color: #fdf2e9;
-    padding: 9.6rem 0;
-
-}
-
-
-.hero-grid{
-    max-width: 130rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 9.6rem;
-    align-items: center;
-
-}
-
+/* *************************************************************** */
+/*? GENERAL (Reusable) Components */
+/* *************************************************************** */
 
 
 .heading-primary{
@@ -127,13 +116,6 @@ body{
     color: #333;
     letter-spacing: -0.5px;
 }
-
-.hero-description{
-    font-size: 2rem;
-    line-height: 1.6;
-    margin-bottom: 4.8rem;
-}
-
 
 .btn:link, .btn:visited{
     /* ? For using box model on inline element */
@@ -179,14 +161,108 @@ body{
     
 }
 
-.hero-img{
-    width: 100%;
-}
 
 /* ? Interface class to add right */
 .margin-right-sm{
     margin-right: 1.6rem !important;
 }
+
+
+
+
+/* *************************************************************** */
+/*? HEADER  */
+/* *************************************************************** */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fdf2e9;
+
+    /* ? not using padding to add vertical height  */
+    /* ? bcz we will later make it sticky */
+    height: 9.6rem;
+    padding: 0 4.8rem;
+}
+
+.logo{
+    height: 2.2rem;
+
+}
+/* *************************************************************** */
+/*? NAVIGATION  */
+/* *************************************************************** */
+
+.main-nav-list{
+    display: flex;
+    list-style: none;
+    gap:3.2rem;
+    align-items: center;
+}
+
+.main-nav-link:link, .main-nav-link:visited {
+    display: inline-block;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.main-nav-link:hover, .main-nav-link:active {
+    color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link, .main-nav-link.nav-cta:visited{
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    background-color: #e67e22;
+    color: #fff;
+}
+.main-nav-link.nav-cta:hover, .main-nav-link.nav-cta:active{
+    background-color: #cf711f;
+}
+
+/* *************************************************************** */
+/*? HERO SECTION */
+/* *************************************************************** */
+
+
+.section-hero{
+    background-color: #fdf2e9;
+    padding: 4.8rem 0 9.6rem 0;
+
+}
+
+
+.hero-grid{
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+
+}
+
+
+
+
+.hero-description{
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+
+
+
+.hero-img{
+    width: 100%;
+}
+
 
 .delivered-meals{
     margin-top: 8rem;
