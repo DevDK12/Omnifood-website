@@ -35,6 +35,8 @@ Mediuem : 1.2
 * Greys : 
 #555 
 #333
+#888
+#ddd
 
 
 
@@ -51,6 +53,7 @@ Mediuem : 1.2
 
 - 06 BORDER-RADIUS
 Default : 9px
+Medium : 11px
 
 
 - 07 WHITE SPACE
@@ -115,6 +118,36 @@ body{
 /*? GENERAL (Reusable) Components */
 /* *************************************************************** */
 
+/*? Wrap all contents of section in separate div then apply all these classes  */
+/*- Container for centring  */
+.container{
+    /* 1140px also used widely */
+    max-width: 120rem;
+    margin: 0 auto;
+
+    /*- To prevent components from gluing on shriniking width of vp */
+    padding: 0 3.2rem;
+}
+
+
+/*- Reusable Grids */
+.grid{
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap:9.6rem;
+}
+.grid--2-cols{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid--3-cols{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.grid--center-v{
+    align-items: center;
+}
+
+
 .heading-primary, .heading-secondary, .heading-tertiary{
     font-weight: 700;
 
@@ -171,7 +204,8 @@ body{
     /* ? Animation of CSS properties */
     /* - transition: property-name time  */
     /* * If this property (original)changes in future then transition will take place */
-    transition: background-color 0.3s;
+    /* transition: background-color 0.3s; */
+    transition: all 0.3s;
 
 }
 .btn--full:link, .btn--full:visited{
@@ -201,37 +235,43 @@ body{
 }
 
 
+.link:link, .link:visited{
+    display: inline-block;
+    color: #e67e22;
+
+    /*? Instead of using text decoration, use padding+border */
+    text-decoration: none;
+
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    /* current color = current text color */
+    
+    transition: all 0.3s;
+}
+.link:hover, .link:active{
+    color: #cf711f;
+    /* border-bottom: none; */
+    border-bottom: 1px solid transparent;
+}
+
+
+/* ? HELPER / SETTING Classes */
+
+
 /* ? Interface class to add right */
 .margin-right-sm{
     margin-right: 1.6rem !important;
 }
 
 
-/*? Wrap all contents of section in separate div then apply all these classes  */
-/*- Container for centring  */
-.container{
-    /* 1140px also used widely */
-    max-width: 120rem;
-    margin: 0 auto;
-
-    /*- To prevent components from gluing on shriniking width of vp */
-    padding: 0 3.2rem;
+.margin-bottom-md{
+    margin-bottom: 4.8rem;
 }
 
-
-/*- Reusable Grids */
-.grid{
-    display: grid;
-    column-gap: 6.4rem;
-    row-gap:9.6rem;
-}
-.grid--2-cols{
-    grid-template-columns: repeat(2,1fr);
-}
-.grid--3-cols{
-    grid-template-columns: repeat(3,1fr);
+.center-text{
+    text-align: center;
 }
 
-.grid--center-v{
-    align-items: center;
+strong{
+    font-weight: 500;
 }
