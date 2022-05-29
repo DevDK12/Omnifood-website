@@ -334,24 +334,7 @@
     gap: 1.6rem;    
 }
 
-.list{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-}
 
-.list-item{
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap:1.6rem;
-}
-.list-icon{
-    width: 3rem;
-    height: 3rem;
-    color: #e67e22;
-}
 
 .all-recipes{
     text-align: center;
@@ -430,4 +413,134 @@
 .gallery-item img:hover{
     transform:scale(1.1);
 }
+
+/* *************************************************************** */
+/*? PRICING SECTION */
+/* *************************************************************** */
+
+
+.section-pricing{
+    padding: 9.6rem 0;
+}
+
+.pricing-plan{
+    /* - De-Emphasisng First plan by not giving it background color */
+    /* background-color: #fdf2e9; */
+    border-radius: 11px;
+    /* padding: 4.8rem; */
+    width: 75%;
+}
+
+.pricing-plan--starter{
+    justify-self: end;
+
+    border: 2px solid #fdf2e9;
+
+    /*? Here due to border element shrinks 2px from all side */
+    /*? Due box-sizing border-box */
+    /*- so reduncing padding to compensate */
+    padding: 4.6rem;
+}
+.pricing-plan--complete{
+    background-color: #fdf2e9;
+    padding: 4.8rem;
+    position: relative;
+
+    /*? To hide overflow rotated ribbon */
+    overflow: hidden;
+}
+.pricing-plan--complete::before{
+    content: "Best value";
+    text-transform: uppercase;
+    position: absolute;
+    top: 6%;
+    right: -18%;
+    transform: rotate(45deg);
+    background-color: #ffd43b;
+    color: #333;
+    padding: 0.8rem 8rem;
+
+    font-size:1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.75;
+
+}
+
+.plan-header{
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+.plan-name{
+    font-size: 2rem;
+    color: #cf711f;
+    font-weight: 600;
+    letter-spacing: 0.75;
+    text-transform: uppercase;
+    margin-bottom: 3.2rem;
+
+}
+.plan-price{
+    font-size: 6.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.6rem;
+
+}
+
+.plan-price span{
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-right: .8rem;
+}
+.plan-text{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #6f6f6f;
+}
+
+.plan-sign-up{
+    text-align: center;
+    margin-top: 4.8rem;
+}
+
+
+.plan-details{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.feature{
+
+}
+
+.feature-icon{
+    height: 3.2rem;
+    width: 3.2rem;
+    color: #e67e22;
+    margin-bottom: 3.2rem;
+    background-color: #fdf2e9;
+    
+    border-radius: 50%;
+    padding: 1.6rem;
+}
+
+.feature-title{
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.feature-text{
+    font-size: 1.8rem;
+    color: #888;
+    line-height: 1.8;
+}
+
+
+
+
+
+
 
