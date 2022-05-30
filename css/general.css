@@ -41,6 +41,7 @@ Mediuem : 1.2
 #888
 #ddd
 #6f6f6f (lightest grey allowed on #fdf2e9 with 4.5 rating) 
+#767676 (lightest grey allowed on #fff)
 
 
 
@@ -96,6 +97,17 @@ Medium : 11px
 * So that If user changes font size of browser then it scales down / up by this percent
 
 
+
+*/
+
+
+/* 
+? Pseudo Class trick 
+*  : => that is
+
+*  .parent element:nth-child(1) => element that is first child of .parent
+
+*  element:nth-child(1) => element that is first child of any parent (1st occurence)
 
 */
 
@@ -162,6 +174,9 @@ body{
 }
 .grid--4-cols{
     grid-template-columns: repeat(4,1fr);
+}
+.grid--5-cols{
+    grid-template-columns: repeat(5,1fr);
 }
 
 .grid--center-v{
