@@ -17,6 +17,7 @@ Default : 1
 Paragraph Default : 1.6
 Small : 1.05
 Mediuem : 1.2
+Large : 1.8
 
 * LETTER SPACING
 -0.5px
@@ -120,6 +121,7 @@ Medium : 11px
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body{
@@ -127,6 +129,9 @@ body{
     line-height: 1;
     font-weight: 400;
     color: #555;
+
+    /*- Only works if there is nothing absolutely positioned in relation to body */
+    overflow-x: hidden;
 }
 
 
@@ -319,6 +324,7 @@ body{
     display: flex;
     align-items: center;
     gap:1.6rem;
+    line-height: 1.2;
 }
 .list-icon{
     width: 3rem;
