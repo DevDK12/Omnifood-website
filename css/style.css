@@ -62,7 +62,7 @@
 }
 
 
-/*? MOBILE */
+/*? MOBILE NAVIGATION*/
 
 .btn-mobile-nav{
     border:none;
@@ -82,6 +82,34 @@
 .icon-mobile-nav[name="close-outline"]{
     display: none;
 }
+
+
+
+/*? STICKY NAVIGATION */
+/*! Add new class to parent element to check if this class exists or not and then add its properties to child element to be altered */
+/*- If parent has sticky class then add new header class with sticky properties to child  element */
+/*- Parent here is body  */
+.sticky .header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 999;
+    
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 8rem;
+    
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0 , 0.03);
+}
+
+/*- If parent has sticky class then add new properties */
+/*- Adding extra margin as sticky is like absolute positioning i.e. out of flow */
+.sticky .section-hero{
+    margin-top: 9.6rem;
+}
+
 
 /* *************************************************************** */
 /*? HERO SECTION */

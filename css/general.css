@@ -122,6 +122,12 @@ Medium : 11px
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+
+    
+    /*? For smooth scrolling */
+    /*- Use this along with href + id to scroll smoothly */
+    /*! But it not works on safari (in iphones) and Microsoft edge */
+    scroll-behavior: smooth;
 }
 
 body{
