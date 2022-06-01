@@ -145,7 +145,7 @@
         z-index: 9999;
     }
     .main-nav{
-        background-color: rgba(255, 255, 255, 0.966);
+        background-color: rgba(255, 255, 255, 0.6);
         position: absolute;
         top: 0;
         left: 0;
@@ -179,6 +179,10 @@
         /*- And we see animation with the help of transition */
 
         transform: translateX(100%);
+
+
+        /*? Adding blur to background */
+        backdrop-filter: blur(10px);
     }
 
 
