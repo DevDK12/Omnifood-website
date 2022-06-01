@@ -468,22 +468,37 @@
                                 You can cancel or pause anytime. And the 
                                 first meal is on us!
                             </p>
-                            <form action="#" class="cta-form grid grid--2-cols">
+                            <!-- <form action="#" class="cta-form grid grid--2-cols"> -->
+                                <!--? Making forms accessible to netlify -->
+                            <form name="sign-up" netlify class="cta-form grid grid--2-cols">
                                 
                                 <!--? Dont write label in place holder but write format of data -->
                                 <!-- <input placeholder="name" type="text"> -->
                                 <div>
                                     <label for="full-name">Full Name</label>
-                                    <input id="full-name" placeholder="Dev Kumar" type="text" required />
+                                    <input id="full-name" 
+                                    placeholder="Dev Kumar" 
+                                    type="text" 
+                                    required 
+                                    name="full-name"
+                                    />
                                 </div>
                                 <div>
                                     <label for="email">Email address</label>
-                                    <input id="email" placeholder="dev@gmail.com" type="email" required />
+                                    <input id="email" 
+                                    placeholder="dev@gmail.com" 
+                                    type="email" 
+                                    required 
+                                    name="email"
+                                    />
                                 </div>
 
                                 <div>
                                     <label for="select-where">Where did you hear from us?</label>
-                                    <select name="" id="select-where" required>
+                                    
+                                    <select name="select-where" 
+                                    id="select-where" 
+                                    required>
                                         
                                         <option value="">Please choose one option</option>
                                         <option value="friends">Friends and Family</option>
